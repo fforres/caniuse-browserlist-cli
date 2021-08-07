@@ -1,0 +1,38 @@
+{
+  "name": "test_browserlistrc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "fforres",
+  "license": "MIT",
+  "bin": {
+    "doessupport": "./cli.mjs",
+    "supports": "./cli.mjs"
+  },
+  "scripts": {
+    "start": "node ./src/index.mjs",
+    "dev": "node -r ts-node/register ./src/index.tsx",
+    "clean": "rm -rf ./dist",
+    "update": "npm update caniuse-lite browserslist",
+    "build": "ncc build ./src/index.tsx -m -s --license licence -o dist"
+  },
+  "dependencies": {
+    "@fforres/ink-quicksearch-input": "^1.0.1",
+    "@vercel/ncc": "^0.29.0",
+    "browserslist": "^4.16.7",
+    "caniuse-api": "^3.0.0",
+    "debug": "^4.3.2",
+    "ink": "^3.0.9",
+    "ink-quicksearch-input": "^1.0.0",
+    "ink-spinner": "^4.0.2",
+    "react": "^17.0.2",
+    "readline": "^1.3.0",
+    "ts-node": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/caniuse-api": "^3.0.2",
+    "@types/caniuse-lite": "^1.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/react": "^17.0.16",
+    "typescript": "^4.3.5"
+  }
+}
