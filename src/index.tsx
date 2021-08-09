@@ -121,6 +121,10 @@ const testApi = async (api: string) => {
     console.log(`😢 Your browserlist does not fully supports: ${api}
 You might want to look into a Ponyfill for it https://ponyfill.com`);
   }
+  console.log(`
+
+========
+`);
 };
 
 const Counter = () => {
