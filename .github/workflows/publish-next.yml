@@ -28,10 +28,15 @@ jobs:
       - name: Build project
         run: yarn build
 
+      - id: random-number-generator
+        run: echo "::set-output name=random-id::$(echo $RANDOM)"
+        shell: bash
+
       - name: Publish To Github Packages
         run:
           yarn publish --access public --tag next
-          --new-version=0.0.${GITHUB_RUN_NUMBER}-next --no-git-tag-version
+          --new-version=0.0.${GITHUB_RUN_NUMBER}-${{steps.random-number-generator.outputs.random-id}}next
+          --no-git-tag-version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_ENV: production
