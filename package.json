@@ -1,5 +1,5 @@
 {
-  "name": "test_browserlistrc",
+  "name": "@fforres/can-i-support",
   "version": "0.0.1",
   "keywords": [
     "ink",
@@ -17,9 +17,9 @@
   "author": "fforres",
   "main": "index.js",
   "bin": {
-    "doessupport": "./cli.mjs",
-    "supports": "./cli.mjs",
-    "caniuse": "./cli.mjs"
+    "doessupport": "./cli.js",
+    "supports": "./cli.js",
+    "caniuse": "./cli.js"
   },
   "scripts": {
     "start": "node ./dist/index.js",
