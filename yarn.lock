@@ -114,27 +114,10 @@
   dependencies:
     "@types/ms" "*"
 
-"@types/has-ansi@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@types/has-ansi/-/has-ansi-3.0.0.tgz"
-  integrity sha512-H3vFOwfLlFEC0MOOrcSkus8PCnMCzz4N0EqUbdJZCdDhBTfkAu86aRYA+MTxjKW6jCpUvxcn4715US8g+28BMA==
-
 "@types/json-schema@^7.0.7":
   version "7.0.9"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.9.tgz"
   integrity sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==
-
-"@types/lodash.isequal@^4.5.5":
-  version "4.5.5"
-  resolved "https://registry.npmjs.org/@types/lodash.isequal/-/lodash.isequal-4.5.5.tgz"
-  integrity sha512-4IKbinG7MGP131wRfceK6W4E/Qt3qssEFLF30LnJbjYiSfHGGRU/Io8YxXrZX109ir+iDETC8hw8QsDijukUVg==
-  dependencies:
-    "@types/lodash" "*"
-
-"@types/lodash@*":
-  version "4.14.172"
-  resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.172.tgz"
-  integrity sha512-/BHF5HAx3em7/KkzVKm3LrsD6HZAXuXO1AJZQ3cRRBZj4oHZDviWPYu0aEplAqDFNHZPW6d3G7KN+ONcCCC7pw==
 
 "@types/ms@*":
   version "0.7.31"
@@ -285,11 +268,6 @@ ansi-escapes@^4.2.1:
   integrity sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==
   dependencies:
     type-fest "^0.21.3"
-
-ansi-regex@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz"
-  integrity sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
 
 ansi-regex@^4.1.0:
   version "4.1.0"
@@ -931,13 +909,6 @@ globby@^11.0.3:
     merge2 "^1.3.0"
     slash "^3.0.0"
 
-has-ansi@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/has-ansi/-/has-ansi-3.0.0.tgz"
-  integrity sha1-Ngd+8dFfMzSEqn+neihgbxxlWzc=
-  dependencies:
-    ansi-regex "^3.0.0"
-
 has-ansi@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/has-ansi/-/has-ansi-4.0.1.tgz"
@@ -1019,17 +990,6 @@ inherits@2:
   version "2.0.4"
   resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
-
-ink-quicksearch-input@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/ink-quicksearch-input/-/ink-quicksearch-input-1.0.0.tgz"
-  integrity sha512-LkH9qow/mKexVYaFL2x2zYXHvK7kOBJyv3wYFP7DLpZU/JyGoC8ym5PyBfeGJtLHMlpDwUctSUC0A/48/ZZJGA==
-  dependencies:
-    "@types/has-ansi" "^3.0.0"
-    "@types/lodash.isequal" "^4.5.5"
-    has-ansi "3.0.0"
-    keypress "^0.2.1"
-    lodash.isequal "4.5.0"
 
 ink-spinner@^4.0.2:
   version "4.0.2"
