@@ -1,13 +1,11 @@
 name: publish-next
 
 on:
-  pull_request:
-    types: [closed]
+  push
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v2
 
@@ -27,9 +25,7 @@ jobs:
         run: yarn typecheck
 
   publish-next:
-    needs: [test]
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v2
 
