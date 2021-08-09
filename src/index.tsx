@@ -1,12 +1,11 @@
-import browserslist from "browserslist";
 import d from "debug";
 import { exec } from "child_process";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const updateDb = require("browserslist/update-db");
 import React, { useState, useEffect } from "react";
-import { Box, render, Text, Static } from "ink";
+import { Box, render, Text } from "ink";
 import { QuickSearchInput, Item } from "@fforres/ink-quicksearch-input";
 import Spinner from "ink-spinner";
-import { stderr } from "process";
 
 const log = d("is_supported");
 
@@ -60,7 +59,7 @@ class Result {
   constructor(
     GlobalSupport: string | number,
     YourSupport: number,
-    Supported: string
+    Supported: string,
   ) {
     this.GlobalSupport = GlobalSupport;
     this.YourSupport = YourSupport;
@@ -101,27 +100,27 @@ const testApi = async (api: string) => {
   Object.keys(supported).forEach((ua) => {
     const supportedElement = supported[ua];
     const passes = Boolean(
-      supportedElement && supportedElement && supportedElement <= list[ua]
+      supportedElement && supportedElement && supportedElement <= list[ua],
     );
     results[browserNameMapping[ua] || ua] = new Result(
       typeof supportedElement === "undefined"
         ? "Not Supported"
         : supportedElement,
       list[ua],
-      passes ? "✅" : "❌"
+      passes ? "✅" : "❌",
     );
     if (!passes) {
       pass = false;
     }
   });
 
-  // // console.info(`Support for ${api} with your browserslist config`);
   console.table(results);
-  // // console.info(`Does it pass? ${pass ? "✅" : "❌"}`);
-  // return {
-  //   results: supported,
-  //   passes: pass,
-  // };
+  if (pass) {
+    console.log(`😁 Your browserlist config supports: ${api}`);
+  } else {
+    console.log(`😢 Your browserlist does not fully supports: ${api}
+You might want to look into a Ponyfill for it https://ponyfill.com`);
+  }
 };
 
 const Counter = () => {
@@ -181,37 +180,3 @@ const Counter = () => {
 };
 
 render(<Counter />);
-
-// import readline from "readline";
-
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout,
-// });
-
-// const prompt = () => {
-//   return new Promise((resolve) => {
-//     var myArg = process.argv?.slice(2)?.[0];
-//     if (myArg) {
-//       resolve(myArg);
-//       return;
-//     } else {
-//       rl.question(
-//         "What API do you want to test support for? ",
-//         function (resp) {
-//           resolve(resp);
-//         }
-//       );
-//     }
-//   });
-// };
-
-// prompt()
-//   .then((response) => {
-//     test(response);
-//     process.exit(0);
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//     process.exit(1);
-//   });
