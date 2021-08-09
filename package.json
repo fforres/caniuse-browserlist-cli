@@ -1,12 +1,25 @@
 {
   "name": "test_browserlistrc",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "fforres",
+  "version": "0.0.1",
+  "keywords": [
+    "ink",
+    "caniuse",
+    "can i use",
+    "browserlist",
+    "browserlistrc",
+    "browser list",
+    "cli",
+    "terminal",
+    "command line",
+    "tool"
+  ],
   "license": "MIT",
+  "author": "fforres",
+  "main": "index.js",
   "bin": {
     "doessupport": "./cli.mjs",
-    "supports": "./cli.mjs"
+    "supports": "./cli.mjs",
+    "caniuse": "./cli.mjs"
   },
   "scripts": {
     "start": "node ./src/index.mjs",
